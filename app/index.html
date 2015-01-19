@@ -44,49 +44,60 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
-          <pre>
-            <code class="language-markup">&lt;h1>'Allo, 'Allo!&lt;/h1>
-            &lt;p class="lead">Always a pleasure scaffolding your apps.&lt;/p>
-            &lt;p>
-              &lt;a class="btn btn-lg btn-success" href="#">
-                Splendid!
-              &lt;/a>
-            &lt;/p>
-            </code>
-          </pre>
+        <div role="tabpanel">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#html" aria-controls="html" role="tab" data-toggle="tab">html</a></li>
+            <li role="presentation"><a href="#css" aria-controls="css" role="tab" data-toggle="tab">css</a></li>
+            <li role="presentation"><a href="#js" aria-controls="js" role="tab" data-toggle="tab">Messages</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="html">
+              <pre>
+                <code class="language-markup">&lt;h1>'Allo, 'Allo!&lt;/h1>
+                &lt;p class="lead">Always a pleasure scaffolding your apps.&lt;/p>
+                &lt;p>
+                  &lt;a class="btn btn-lg btn-success" href="#">
+                    Splendid!
+                  &lt;/a>
+                &lt;/p>
+                </code>
+              </pre>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="css">
+              <pre>
+                <code class="language-css">.btn-success {
+                    color: #fff;
+                    background-color: #5cb85c;
+                    border-color: #4cae4c;
+                  }
+                  .btn-success:hover,
+                  .btn-success:focus{
+                    background-color: #4cae4c;
+                  }
+                </code>
+              </pre>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="js">
+              <pre>
+                <code class="language-javascript">var foo ="bar", baz=5;
+                if (true) {
+                  while (true) {
+                    console.log("Booya!");
+                  }
+                }
+                </code>
+              </pre>
+            </div>
+          </div>
+
         </div>
+
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <pre>
-            <code class="language-css"> 
-            .btn-success {
-              color: #fff;
-              background-color: #5cb85c;
-              border-color: #4cae4c;
-            }
-            .btn-success:hover, 
-            .btn-success:focus {
-              background-color: #4cae4c;
-            }
-            </code>
-          </pre>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <pre>
-            <code class="language-javascript">var foo ="bar", baz=5;
-            if (true) {
-              while (true) {
-                console.log("Booya!");
-              }
-            }
-            </code>
-          </pre>
-        </div>
-      </div>
+
 
       <div class="footer">
         <p>♥ from the Yeoman team</p>
@@ -94,6 +105,12 @@
     </div>
     <script src="scripts/prism.js"></script>
     <script src="plugins/line-numbers/prism-line-numbers.js"></script>
+    <script>
+      $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
